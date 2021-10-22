@@ -1,6 +1,6 @@
 #include "stats.h"
 
-struct Statistics{
+Stats Statistics{
 	float average;
 	float min;
 	float max;
