@@ -1,8 +1,9 @@
-
-struct Stats compute_statistics(const float* numberset, int setlength);
-
-typedef void (*alerter_funcptr)();
-void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
-
-extern int emailAlertCallCount;
-extern int ledAlertCallCount;
+#include <math.h>
+typedef struct Stats
+Stats compute_statistics(const float* numberset, int setlength);
+#ifdef NAN
+/* NAN is supported */
+#endif
+#ifdef INFINITY
+/* INFINITY is supported */
+#endif
