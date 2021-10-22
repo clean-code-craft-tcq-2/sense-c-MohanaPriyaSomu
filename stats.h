@@ -1,5 +1,5 @@
 #include <math.h>
-typedef struct Stats
+typedef struct Stats;
 Stats compute_statistics(const float* numberset, int setlength);
 #ifdef NAN
 /* NAN is supported */
