@@ -1,17 +1,18 @@
-#include <math.h>
+
+#include <stdio.h>
 #include "stats.h"
 
-Stats Statistics
+typedef struct Statistics
 {
 	float average;
 	float min;
 	float max;
-};
+}Stats;
 
-Stats compute_statistics(const float* numberset, int setlength) 
+struct compute_statistics(const float* numberset, int setlength) 
 {
     int i = 0;
-    int sum = 0;
+    float sum = 0.0;
     Stats s;
     s.average = 0;
     s.min = s.max = numberset[0];
@@ -27,10 +28,18 @@ Stats compute_statistics(const float* numberset, int setlength)
 			s.max = numberset[i];
 		}
 	}
-	s.average = sum/setlength;
+	
 	if (setlength == 0)
 	{
-		return NAN; 
+       s.average = NAN;
+	   s.min = NAN;
+       s.max = NAN;
+
 	}
+	else 
+	{
+		s.average = sum/setlength;
+	}
+
 	return s; // TEST_CASE("reports average, minimum and maximum")
 }
