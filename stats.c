@@ -1,6 +1,8 @@
+#include <math.h>
 #include "stats.h"
 
-Stats Statistics{
+Stats Statistics
+{
 	float average;
 	float min;
 	float max;
@@ -9,8 +11,8 @@ Stats Statistics{
 Stats compute_statistics(const float* numberset, int setlength) 
 {
     int i = 0;
-	int sum = 0;
-	s.average = 0;
+    int sum = 0;
+    s.average = 0;
     s.min = s.max = numberset[0];
     for (i = 0; i<setlength; i++)
 	{
