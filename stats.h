@@ -1,3 +1,11 @@
+#ifndef STATS_H 
+#define STATS_H 
+
 #include <math.h>
-typedef struct Stats Stats;
+
+#ifdef NAN
+/* NAN is supported */
+#endif
 Stats compute_statistics(const float* numberset, int setlength);
+
+#endif
