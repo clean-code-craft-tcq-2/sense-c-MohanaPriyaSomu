@@ -7,12 +7,12 @@
 /* NAN is supported */
 #endif
 
-struct Statistics
+struct Stats
 {
     float average;
     float min;
     float max;
-}Stats;
+};
 
 Stats compute_statistics(const float* numberset, int setlength);
 
