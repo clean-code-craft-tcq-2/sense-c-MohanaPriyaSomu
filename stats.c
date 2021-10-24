@@ -2,14 +2,14 @@
 #include <math.h>
 #include "stats.h"
 
-typedef struct Statistics
+struct Statistics
 {
     float average;
     float min;
     float max;
 }Stats;
 
-(Stats) compute_statistics(const float* numberset, int setlength) 
+Stats compute_statistics(const float* numberset, int setlength) 
 {
     int i = 0;
     float sum = 0.0;
@@ -32,7 +32,7 @@ typedef struct Statistics
     if (setlength == 0)
     {
 	s.average = NAN;
-	   s.min = NAN;
+	s.min = NAN;
 	s.max = NAN;
 
     }
