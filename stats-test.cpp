@@ -5,7 +5,6 @@
 #include "alert.h"
 
 #include <stdlib.h>
-#include <stdbool.h>
 #include <math.h>
 #include <cmath>
 
@@ -27,9 +26,9 @@ TEST_CASE("average is NaN for empty array") {
 	
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
-	REQUIRE(isnan(computedStats.min) == FALSE);
-	REQUIRE(isnan(computedStats.max) == FALSE);
-	REQUIRE(isnan(computedStats.average) == FALSE);
+	REQUIRE(isnan(computedStats.min) == false);
+	REQUIRE(isnan(computedStats.max) == false);
+	REQUIRE(isnan(computedStats.average) == false);
 }
 
 TEST_CASE("raises alerts when max is greater than threshold") {
