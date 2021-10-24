@@ -9,7 +9,7 @@ typedef struct Statistics
 	float max;
 }Stats;
 
-struct compute_statistics(const float* numberset, int setlength) 
+(Stats) compute_statistics(const float* numberset, int setlength) 
 {
     int i = 0;
     float sum = 0.0;
