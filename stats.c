@@ -2,13 +2,6 @@
 #include <math.h>
 #include "stats.h"
 
-struct Statistics
-{
-    float average;
-    float min;
-    float max;
-}Stats;
-
 Stats compute_statistics(const float* numberset, int setlength) 
 {
     int i = 0;
