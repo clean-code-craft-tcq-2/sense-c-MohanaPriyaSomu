@@ -36,3 +36,16 @@ Stats compute_statistics(const float* numberset, int setlength)
 
     return s; // TEST_CASE("reports average, minimum and maximum")
 }
+
+//Testcase:"average is NaN for empty array"
+Stats compute_statistics(const int numberset, int setlength)
+ {
+	Stats s; 
+	if ((setlength == 0 ) || (numberset == 0))
+	{
+		s.average = NAN;
+		s.min = NAN;
+		s.max = NAN;		
+	}
+	return s;	
+}
